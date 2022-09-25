@@ -1,0 +1,22 @@
+{
+  "name": "calculator_vanillajs",
+  "version": "1.0.0",
+  "description": "Creating Calculator Using Vanilla Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MW25-hush/Calculator_VanillaJs.git"
+  },
+  "author": "Mohammad Mehdi Wahid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MW25-hush/Calculator_VanillaJs/issues"
+  },
+  "homepage": "https://github.com/MW25-hush/Calculator_VanillaJs#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
