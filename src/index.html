@@ -8,43 +8,45 @@
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body class="">
-
-        <div class="flex items-center h-screen max-w-xs  mx-auto ">
-           <div class="border rounded-lg border-black grow  bg-black py-8"> 
-                <div id="prompt" class=" text-white h-20 text-4xl font-bold text-end mx-12 pt-6">0</div>
-                <div class="space-y-2 mx-1">
-                    <div class="space-x-2 mx-5">
-                        <button class="btn-function">AC</button>
-                        <button class="btn-function">-/+</button>
-                        <button class="btn-function">%</button>
-                        <button class="btn-operator">/</button>
+    
+    <div class="flex items-center h-screen max-w-xs  mx-auto ">
+        <div class="border rounded-lg border-black grow  bg-black py-8"> 
+            <div id="screenResult" class=" text-white h-20 text-4xl font-bold text-end mx-12 pt-6">0</div>
+            <div class="space-y-2 mx-1">
+                <div class="space-x-2 mx-5">
+                    <button onclick="functionButton('clear')" class="btn-function">AC</button>
+                    <button onclick="functionButton('signChange')" class="btn-function">-/+</button>
+                    <button onclick="functionButton('percentage')" class="btn-function">%</button>
+                    <button onclick="operatorButton('divide')" class="btn-operator ">/</button>
+                </div>
+                <div class="space-x-2 mx-5">
+                        <button onclick="numberButton(7)" class="btn-number">7</button>
+                        <button onclick="numberButton(8)" class="btn-number">8</button>
+                        <button onclick="numberButton(9)" class="btn-number">9</button>
+                        <button onclick="operatorButton('multiply')" class="btn-operator">x</button>
                     </div>
                     <div class="space-x-2 mx-5">
-                        <button class="btn-number">7</button>
-                        <button class="btn-number">8</button>
-                        <button class="btn-number">9</button>
-                        <button class="btn-operator">x</button>
+                        <button onclick="numberButton(4)" class="btn-number">4</button>
+                        <button onclick="numberButton(5)" class="btn-number">5</button>
+                        <button onclick="numberButton(6)" class="btn-number">6</button>
+                        <button onclick="operatorButton('subtract')" class="btn-operator">-</button>
                     </div>
                     <div class="space-x-2 mx-5">
-                        <button class="btn-number">4</button>
-                        <button class="btn-number">5</button>
-                        <button class="btn-number">6</button>
-                        <button class="btn-operator">-</button>
+                        <button onclick="numberButton(1)" class="btn-number">1</button>
+                        <button onclick="numberButton(2)" class="btn-number">2</button>
+                        <button onclick="numberButton(3)" class="btn-number">3</button>
+                        <button onclick="operatorButton('add')" class="btn-operator">+</button>
                     </div>
                     <div class="space-x-2 mx-5">
-                        <button class="btn-number">1</button>
-                        <button class="btn-number">2</button>
-                        <button class="btn-number">3</button>
-                        <button class="btn-operator">+</button>
-                    </div>
-                    <div class="space-x-2 mx-5">
-                        <button class="btn-number w-32 text-start text-xl" >0</button>
-                        <button class="btn-number">.</button>
-                        <button class="btn-operator">=</button>
+                        <button onclick="numberButton(0)" class="btn-number w-32 text-start text-xl" >0</button>
+                        <button onclick="functionButton('decimal')" class="btn-number">.</button>
+                        <!-- //todo to see if the class btn-operator can be applied and the focus can be removed -->
+                        <button onclick="operatorButton('equal')" class="bg-yellow-400 text-white p-2.5 rounded-full font-bold w-14 h-14 hover:bg-white hover:text-black">=</button>
                     </div>
                 </div>
                 
+            </div>
         </div>
-        </div>
-</body>
-</html>
+    </body>
+    <script src="calc.js"></script>
+    </html>
