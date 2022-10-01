@@ -12,12 +12,29 @@ const functionButton = (functionType) => {
         (screenResult.innerHTML = numberStorage);
       break;
     case "signChange":
-      tempStorage !== "" || tempStorage !== 0
-        ? Math.sign(tempStorage) == 1
-        ? (tempStorage *= -1)
-          : (tempStorage *= -1) 
-        : tempStorage - 0;
-        screenResult.innerHTML = tempStorage;
+      let sign = tempStorage;
+      sign !== "" && sign !== 0
+        ? Math.sign(sign) == 1
+          ? (sign = tempStorage *= -1)
+          : (sign = tempStorage *= -1)
+        : numberStorage !== 0
+        ? Math.sign(numberStorage) == 1
+           ? (sign = numberStorage *= -1)
+            // console.log(sign, numberStorage)
+          : (sign = numberStorage *= -1)
+        : (sign = 0);
+        console.log(sign,numberStorage);
+      screenResult.innerHTML = sign;
+      break;
+    case "percentage":
+      numberStorage = tempStorage;
+      tempStorage = "";
+      numberStorage *= 0.01;
+      screenResult.innerHTML = numberStorage;
+      break;
+    case "decimal":
+      tempStorage += ".";
+      screenResult.innerHTML = tempStorage;
   }
 };
 
