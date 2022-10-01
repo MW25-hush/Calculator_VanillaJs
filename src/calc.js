@@ -23,7 +23,6 @@ const functionButton = (functionType) => {
             // console.log(sign, numberStorage)
           : (sign = numberStorage *= -1)
         : (sign = 0);
-        console.log(sign,numberStorage);
       screenResult.innerHTML = sign;
       break;
     case "percentage":
